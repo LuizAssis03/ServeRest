@@ -3,8 +3,6 @@ const { postUsers } = require("../../../core/service/users/postUser.service.js")
 const { TC04 } = require("../../../data/users/users.data.js");
 
 describe('POST - users', () => {
-
-    let user
     
     before ('should register a client', async () =>{
         user = await postUsers (TC04)

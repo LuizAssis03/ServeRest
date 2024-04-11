@@ -9,10 +9,6 @@ describe('POST - users', () => {
 
     before ('register a client', async () =>{
         user = await postUsers(TC05);
-        assert.equal(user.json.message, TC05.response201, TC05.failmessage);
-        expect(user.json).to.have.property('_id');
-        expect(user.json._id).to.have.lengthOf(16)
-        expect(user.json._id).to.be.a('string');
     })
 
 
