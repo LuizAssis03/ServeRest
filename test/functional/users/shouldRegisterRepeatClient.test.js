@@ -11,7 +11,7 @@ describe('POST - users', () => {
         
     })
 
-    it('register a repeat client', async () => {
+    it('[TC-04] - register a repeat client', async () => {
         let newUser = await postUsers(TC04, 400);
         assert.equal(newUser.json.message, TC04.response400, TC04.failmessage);
         

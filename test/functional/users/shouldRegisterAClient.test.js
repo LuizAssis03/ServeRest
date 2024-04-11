@@ -4,7 +4,7 @@ const { assert, expect } = require("chai");
 
 describe('POST - users', () => {
 
-    it('register a client', async () => {
+    it('[TC-01] - register a client', async () => {
         let newUser = await postUsers(TC01);
         assert.equal(newUser.json.message, TC01.response201, TC01.failmessage);
         expect(newUser.json).to.have.property('_id');

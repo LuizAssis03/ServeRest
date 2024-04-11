@@ -16,7 +16,7 @@ describe('POST - users', () => {
     })
 
 
-    it('delete the client', async () => {
+    it('[TC-05] - delete the client using id', async () => {
 
         let clientDelete = await deleteUsers(user.json._id)
         assert.equal(clientDelete.json.message, TC05.response200, TC05.failmessagedelete)
