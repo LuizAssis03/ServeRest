@@ -3,7 +3,7 @@ const { postUsers } = require("../../../core/service/users/postUser.service.js")
 const { TC03 } = require("../../../data/users/users.data.js");
 
 describe('POST - users', () => {
-
+    let user
     before('create a admin client', async () =>{
         user = await postUsers(TC03);
     })

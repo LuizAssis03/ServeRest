@@ -10,6 +10,6 @@
   },
   "scripts": {
     "test": "mocha test/functional/users/**.test.js",
-    "unitTest": "mocha test/functional/users/shouldDeleteAClient.test"
+    "unitTest": "mocha test/functional/users/shouldSearchClient.test.js"
   }
 }
