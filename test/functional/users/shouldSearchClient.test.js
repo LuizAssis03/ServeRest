@@ -4,10 +4,9 @@ const { postUsers } = require("../../../core/service/users/postUser.service.js")
 const { TC07 } = require("../../../data/users/users.data.js");
 const { assert, expect } = require("chai");
 
-describe('POST - get users', () => {
+describe('GET - get users', () => {
 
     let registerUser
-    let reponse
 
     before('create a user', async () => {
         registerUser = await postUsers(TC07);
@@ -15,24 +14,24 @@ describe('POST - get users', () => {
 
     it('[TC-07] - should find a user by name', async () => {
         
-        let user = await searchUserByName(TC07.name);
-        assert.equal(user.usuarios[1], TC07.name, "O nome é diferente do esperado")
-        console.log(user)
+        let user = await searchUserByName(TC07.name)
+        assert.equal(user.usuarios[0].nome, TC07.name, 'O nome é diferente do esperado')
 
     })
 
-    // it('[TC-08] - should find a user by email', async () => {
+    it('[TC-08] - should find a user by email', async () => {
 
-    //     let reponse = await searchUserByEmail(TC07.email)
-    //     console.log(reponse)
+        let user = await searchUserByEmail(TC07.email)
+        assert.equal(user.usuarios[0].email, TC07.email, 'O nome é diferente do esperado')
 
-    // })
+    })
 
     
-    // it('[TC-09] - should find a user by id', async () => {
+    it('[TC-09] - should find a user by id', async () => {
 
-    //     let reponse = await searchUserById(Registeruser.json._id)
-    //     console.log(reponse)
+        let user = await searchUserById(registerUser.json._id)
+        assert.equal(user.usuarios[0].nome, TC07.name, 'O nome é diferente do esperado')
+        assert.equal(user.usuarios[0].email, TC07.email, 'O nome é diferente do esperado')
 
-    // })
+    })
 })

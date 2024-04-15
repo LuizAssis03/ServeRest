@@ -7,7 +7,8 @@ async function postUsers(data, statusCode = 201) {
             "nome": data.name,
             "email": data.email,
             "password": data.password,
-            "administrador": data.admin
+            "administrador": data.admin,
+
         })
         .expectStatus(statusCode);
 }
