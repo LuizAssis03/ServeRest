@@ -146,4 +146,26 @@ const TC07 = {
     failmessagedelete: 'A mensagem é diferente do esperado'
 }
 
-module.exports = { TC02, TC01, TC03, TC04, TC05, TC06, TC07 }
+const TC08 = {
+    name: faker.person.fullName({
+        firstName: 'TC08'
+    }),
+
+    email: faker.internet.email({
+        firstName: 'TC08'
+    }),
+
+    password: faker.internet.password({
+        length: 6
+    }),
+
+    admin: 'true',
+
+    response201: 'Cadastro realizado com sucesso',
+    response400: 'Este email já está sendo usado',
+    failmessage: 'a menssagem é diferente do esperado',
+    response200: 'Registro excluído com sucesso',
+    failmessagedelete: 'A mensagem é diferente do esperado'
+}
+
+module.exports = { TC02, TC01, TC03, TC04, TC05, TC06, TC07, TC08 }
