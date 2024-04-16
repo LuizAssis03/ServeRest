@@ -12,26 +12,23 @@ describe('GET - get users', () => {
         registerUser = await postUsers(TC08);
     })
 
-    it('[TC-08] - should find a admin client by name', async () => {
+    it('[TC-10] - should find a admin client by name', async () => {
         
         let user = await searchUserByName(TC08.name)
         assert.equal(user.usuarios[0].nome, TC08.name, 'O nome é diferente do esperado')
-        console.log(user)
     })
 
-    it('[TC-09] - should find a admin client by email', async () => {
+    it('[TC-11] - should find a admin client by email', async () => {
 
         let user = await searchUserByEmail(TC08.email)
         assert.equal(user.usuarios[0].email, TC08.email, 'O nome é diferente do esperado')
-        console.log(user)
     })
 
     
-    it('[TC-10] - should find a admin client by id', async () => {
+    it('[TC-12] - should find a admin client by id', async () => {
 
         let user = await searchUserById(registerUser.json._id)
         assert.equal(user.usuarios[0].nome, TC08.name, 'O nome é diferente do esperado')
         assert.equal(user.usuarios[0].email, TC08.email, 'O nome é diferente do esperado')
-        console.log(user)
     })
 })
