@@ -10,6 +10,8 @@
   },
   "scripts": {
     "test": "mocha test/functional/users/**.test.js",
-    "unitTest": "mocha test/functional/users/shouldSearchAdminClient.test.js"
+    "testLogin": "mocha test/functional/login/post/**.test.js",
+    "unitTest": "mocha test/functional/login/post/loginAsInvalidAdmin.test.js"
   }
 }
+

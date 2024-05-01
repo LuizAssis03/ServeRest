@@ -1,8 +1,8 @@
 
-const { getUser, searchUserById, searchUserByName, searchUserByEmail } = require("../../../core/service/users/getUser.service.js");
+const { searchUserById, searchUserByName, searchUserByEmail } = require("../../../core/service/users/getUser.service.js");
 const { postUsers } = require("../../../core/service/users/postUser.service.js");
 const { TC07 } = require("../../../data/users/users.data.js");
-const { assert, expect } = require("chai");
+const { assert } = require("chai");
 
 describe('GET - get users', () => {
 
